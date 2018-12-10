@@ -37,18 +37,7 @@
       var mesh=new THREE.Mesh( geometry, material );
       scene.add( mesh );
      
-      camera.position.z=3;
-      
-      var clock=new THREE.Clock();
-      var render=function(){
-        requestAnimetionFrame( render );
-        var delta_time=clocl.getDelte();
-        mesh.rotation.x+=0.1*delta_time;
-        mesh.rotation.y+=0.3*delta_time;
-        
-        renderer.render( scene, camera);
-        
-         // パーティクル
+          // パーティクル
       var particle_geometry=new THREE.Geometry();
       var numParticles=2000;
       for(var i=0;i<numParticles;i++)
@@ -70,6 +59,17 @@
       
       var emitter=new THREE.Points(particle_geometry, particle_material);
       scene.add(emitter);
+        
+      camera.position.z=3;
+      
+      var clock=new THREE.Clock();
+      var render=function(){
+        requestAnimetionFrame( render );
+        var delta_time=clock.getDelte();
+        mesh.rotation.x+=0.1*delta_time;
+        mesh.rotation.y+=0.3*delta_time;
+        
+        renderer.render( scene, camera);
         
       }
     </script>
