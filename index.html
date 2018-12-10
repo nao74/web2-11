@@ -9,7 +9,7 @@
   </style>
   </head>
   <body>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
     <script type="text/javascript">
       var scene=new THREE.Scene();
       var camera=new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000);
@@ -24,14 +24,14 @@
         camera.aspect=window.innerWidht/window.innerHeight;
         camera.updateProjectionMatrix();
       }, false );
-    
-      var geometry=new THREE.BoxGeometry(1, 1, 1);
-      var material=new THREE.MeshBasicMaterial({ color: Oxccffcc});
-      var mesh=new THREE.Mesh( geometry, material );
-      scene.add( mesh );
-     
-      camera.position.z=5;
       
+      var geometry = new THREE.BoxGeometry( 1, 1, 1);
+      ver material = new THREE.MeshBasicMaterial({color: 0xccffcc});
+      var mesh = new THREE.Mesh( geometry, material );
+      scene.add( mash );
+    
+     camera.position.z = 5;
+    
       var clock=new THREE.Clock();
       var render=function(){
         requestAnimetionFrame( render );
