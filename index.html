@@ -26,14 +26,14 @@
       }, false );
       
       var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-      ver material = new THREE.MeshBasicMaterial({color: 0xccffcc});
+      ver material = new THREE.MeshBasicMaterial({color: 0xffcccc});
       var mesh = new THREE.Mesh( geometry, material );
       scene.add( mesh );
     
      camera.position.z = 5;
     
      var clock = new THREE.Clock();
-      var render = function() {
+      var render = function () {
         requestAnimationFrame( render );
         
         var delta_time = clock.getDelta();
